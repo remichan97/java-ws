@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Eclipse Metro/2.4.8 (RELEASE-2.4.8-e044505; 2022-01-04T13:29:23+0000) JAXWS-RI/2.3.5 JAXWS-API/2.3.3 JAXB-RI/2.3.5 JAXB-API/2.3.3 git-revision#e044505. --><xs:schema xmlns:tns="http://services/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services/">
+
+<xs:element name="addNew" type="tns:addNew"/>
+
+<xs:element name="addNewResponse" type="tns:addNewResponse"/>
+
+<xs:element name="delete" type="tns:delete"/>
+
+<xs:element name="deleteResponse" type="tns:deleteResponse"/>
+
+<xs:element name="findAll" type="tns:findAll"/>
+
+<xs:element name="findAllResponse" type="tns:findAllResponse"/>
+
+<xs:element name="findByRollNo" type="tns:findByRollNo"/>
+
+<xs:element name="findByRollNoResponse" type="tns:findByRollNoResponse"/>
+
+<xs:element name="sinhVien" type="tns:sinhVien"/>
+
+<xs:element name="update" type="tns:update"/>
+
+<xs:element name="updateResponse" type="tns:updateResponse"/>
+
+<xs:complexType name="findByRollNo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByRollNoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sinhVien" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sinhVien">
+<xs:sequence>
+<xs:element name="className" type="xs:string" minOccurs="0"/>
+<xs:element name="fullName" type="xs:string" minOccurs="0"/>
+<xs:element name="rollId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="delete">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sinhVien" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNew">
+<xs:sequence>
+<xs:element name="arg0" type="tns:sinhVien" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNewResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="update">
+<xs:sequence>
+<xs:element name="arg0" type="tns:sinhVien" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
